@@ -1,7 +1,6 @@
-// arquivo App.js, criado pelo create-react-app, modificado
 import React from 'react';
 import './App.css';
-import Order from './Order';
+import Order from './Order.js';
 
 class App extends React.Component {
   render() {
@@ -28,7 +27,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1> Orders recently created </h1>
-         {/*  adicione os componentes aqui */}
+         <Order user={user} product={product} value={price.value} currency={price.currency}/>
       </div>
     );
   }
