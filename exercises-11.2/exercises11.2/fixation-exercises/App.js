@@ -4,7 +4,7 @@ import Order from './Order.js';
 
 class App extends React.Component {
   render() {
-    const headphone = {
+    const objects = [{
       id: 102,
       user: "cena@gmail.com",
       product: "Razer Headphone",
@@ -12,9 +12,8 @@ class App extends React.Component {
         value: 99.99,
         currency: "dollars"
       }
-    };
-
-    const energyDrink = {
+    }
+    {
       id: 77,
       user: "cena@gmail.com",
       product: "Monster 500mL",
@@ -22,7 +21,7 @@ class App extends React.Component {
         value: 9.99,
         currency: "dollars"
       }
-    };
+    }];
 
     return (
       <div className="App">
