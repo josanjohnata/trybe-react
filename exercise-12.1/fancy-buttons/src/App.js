@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 
@@ -10,6 +9,7 @@ class App extends React.Component {
       clicks: 0
     }
     this.buttonJoin = this.buttonJoin.bind(this);
+    this.changeColor = this.changeColor.bind(this);
     
   }
 
@@ -19,10 +19,19 @@ class App extends React.Component {
     }))
   }
 
+  changeColor() {
+    this.setState((estadoAnterior) => ({
+      clicks: estadoAnterior.clicks % 2 === 0
+    }))
+  }
+
   render() {
     return (
       <div className="App">
-        <button onClick={this.buttonJoin}>{this.state.clicks}</button>
+        <h1>{this.state.clicks}</h1>
+        <button onClick={this.buttonJoin} style={{
+          backgroundColor: this.state.clicks % 2 === 0 ? 'green' : 'gray'
+          }}>Number</button>       
       </div>
     )
   }
