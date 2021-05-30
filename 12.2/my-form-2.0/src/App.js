@@ -1,25 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class Form extends Component {
+  constructor() {
+    super();
+
+    this.handleChange = this.handleChange.bind(this);
+
+    this.state = {
+      email: '',
+    };
+  }
+
+  handleChange(event) {
+    this.setState({
+      email: event.target.value,
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Estados e React - Tecnologia fantástica ou reagindo a regionalismos?</h1>
+        <form className="form">
+          <label>
+            Nome:
+            <input
+              name="name"
+              type="text"
+            />
+          </label>
+          <label>
+            Email:
+            <input
+              name="email"
+              type="email"
+              onChange={ this.handleChange }
+            />
+          </label>
+          <label>
+            Idade:
+            <select
+              name="age"
+              defaultValue=""
+            >
+              <option value="">Selecione</option>
+              <option value="adult">Maior que 18</option>
+              <option value="underage">Menor que 18</option>
+            </select>
+          </label>
+          <label>
+            Anedota:
+            <textarea name="anecdote" />
+          </label>
+        </form>
+      </div>
+    );
+  }
 }
 
-export default App;
+export default Form;
