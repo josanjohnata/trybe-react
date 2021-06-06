@@ -1,10 +1,9 @@
 import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-class App extends React.Component {
-  render() {
-    return (
-      <h1>My first React Class Component!</h1>
-    )
-  }
+function App() {
+  return ();
 }
+
 export default App;
