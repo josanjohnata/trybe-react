@@ -1,9 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
+import Component from './Component'
 import './App.css';
 
 function App() {
-  return ();
+  return (
+    <Component />
+  );
 }
 
 export default App;
