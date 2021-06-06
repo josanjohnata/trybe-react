@@ -1,9 +1,8 @@
-// src/App.js
 import React from 'react';
+import Album from './Album';
 
 class App extends React.Component {
   render() {
-    // Declaração do objeto contendo informações do album01
     const album01 = {
       image: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/b0/Coldplay_-_Mylo_Xyloto.JPG/220px-Coldplay_-_Mylo_Xyloto.JPG',
       title: 'Mylo Xyloto',
@@ -35,22 +34,10 @@ class App extends React.Component {
 
     // Retorno do que será renderizado
     return (
-      <article>
-        <section>
-          <img src={ album01.image } alt={ album01.title } />
-          <h2>{ album01.title }</h2>
-          <p>Lançamento: { album01.releaseDate.year }</p>
-          <p>Gravadora: { album01.others.recordCompany }</p>
-          <p>Formatos: { album01.others.formats }</p>
-        </section>
-        <section>
-          <img src={ album02.image } alt={ album02.title } />
-          <h2>{ album02.title }</h2>
-          <p>Lançamento: { album02.releaseDate.year }</p>
-          <p>Gravadora: { album02.others.recordCompany }</p>
-          <p>Formatos: { album02.others.formats }</p>
-        </section>
-      </article>
+      <div>
+        <Album album={ album01 } />
+        <Album album={ album02 } />
+    </div>
     );
   }
 }
