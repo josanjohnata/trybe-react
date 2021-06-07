@@ -1,0 +1,15 @@
+main {
+  max-width: 50vw;
+  padding: 1em;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 1em;
+}
+
+.pokedex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
